@@ -1,4 +1,10 @@
-provider "aws" { region = "${ var.aws["region"] }" }
+provider "aws" { 
+  region = "${ var.aws["region"] }"
+  profile = "${ var.aws["profile"] }"
+  assume_role {
+    role_arn ="${ var.aws["role_arn"] }"
+  }
+}
 
 # variables
 variable "aws" {
@@ -7,6 +13,8 @@ variable "aws" {
     azs = ""
     key-name = ""
     region = ""
+    profile = ""
+    role_arn = ""
   }
 }
 variable "cidr" {

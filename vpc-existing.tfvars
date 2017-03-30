@@ -13,3 +13,9 @@
 # 	subnet-ids-public = "subnet-,subnet-"
 # 	subnet-ids-private = "subnet-,subnet-"
 # }
+# 
+# 
+instance-type = {
+  worker = "m4.xlarge"
+  etcd = "m4.xlarge"
+}
